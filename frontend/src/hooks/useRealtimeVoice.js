@@ -166,7 +166,7 @@ export function useRealtimeVoice() {
     formData.append("audio", blob, "utterance.webm");
 
     try {
-      const result = await API.post("/voice-chat", formData);
+      const result = await API.post("/api/voice-chat", formData);
 
       const userText = result.data.user_text || "";
       const assistantText =
@@ -363,7 +363,7 @@ export function useRealtimeVoice() {
   const clearChat = useCallback(async () => {
     setError("");
     try {
-      await API.post("/clear-chat");
+      await API.post("/api/clear-chat");
       setMessages([]);
     } catch (err) {
       setError(err.message || "Failed to clear chat.");
