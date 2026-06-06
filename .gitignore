@@ -1,0 +1,19 @@
+# Python
+backend/.env
+backend/uploads/
+backend/__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vscode
+.vscode/
+
+# Logs
+*.log
